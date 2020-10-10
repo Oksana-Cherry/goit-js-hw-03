@@ -10,14 +10,36 @@ function calculateTotalPrice(array, prop) {
   }
  return names;
 }*/
-  let totalPrice = 0;
-  for (const product of products) {
-    if (prop === product.name) {
-      totalPrice += product.price * product.quantity;
-    }
-  }
-  return totalPrice;
+  //мой вариант
+   let totalPrice = 0;
+   for (const product of products) {
+     if (prop === product.name) {
+       totalPrice += product.price * product.quantity;
+     }
+   }
+   return totalPrice;
 };
+ //вариант2
+  /*  let total = 0;
+  for (const arr of array) {
+      if ( prop=== arr.name) {
+        total += arr.quantity * arr.price;
+      }   
+  }
+  return total;
+}*/
+//вариант3
+ /* let totalPrice = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    const keys = Object.keys(array[i])
+      if (prop === array[i][keys[0]]) {
+        totalPrice += array[i][keys[1]] * array[i][keys[2]];
+      }
+   }
+   return totalPrice;
+};
+ */
+
 // Объекты и ожидаемый результат
 const products = [
     { name: 'Радар', price: 1300, quantity: 4 },
